@@ -1,0 +1,182 @@
+$mainColor: #2D2640;
+$GrayishBlue:hsl(216, 30%, 68%);
+$VeryDarkViolet: hsl(270, 9%, 17%);
+$DarkGrayishViolet: hsl(273, 4%, 51%);
+$VeryLightGray: hsl(0, 0%, 98%);
+$paddingLeft:80px;
+$paddingTop:30px;
+$paddingBottom:50px;
+$paddingRight:50px;
+.clearfix{clear:both;}
+%bt{
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 200%;
+    padding-left: 35px;
+    padding-right: 35px;
+    letter-spacing: 3px;
+}
+%logo{
+    text-transform: uppercase;
+    padding-left: $paddingLeft;
+    float: left;
+    color: $VeryDarkViolet;
+    font-size: 35px;
+}
+%ul{      
+    list-style: none;
+    padding-right: 10px;
+    overflow: hidden;
+    float: right;}
+%li{           
+    float: left;
+    padding: 20px;
+    text-decoration: none;}
+.nv{.nvbar{
+    overflow: hidden;
+    background-color: $VeryLightGray;
+    color: $DarkGrayishViolet;
+    text-transform: uppercase;
+    ul {@extend %ul;
+        li {@extend %li;
+            color: $GrayishBlue;
+            a{
+                text-decoration: none;
+                color: $GrayishBlue;
+                &:hover{color:$mainColor}
+                &.active{
+                    padding: 5px;
+                    border:1px solid $mainColor;
+                    color: $mainColor;}
+              }
+          }
+        }
+        .logo{
+            @extend %logo
+            }
+}
+}
+.header{
+.slider{
+    padding-right: $paddingRight;
+    padding-top: $paddingTop;
+    overflow: hidden;
+    background-color: $mainColor;
+    padding-bottom: $paddingBottom;
+    .pragraph {
+            box-sizing: border-box;
+            color: $VeryLightGray;
+            float: left;
+            width: 50%;
+            padding-left: $paddingLeft;
+            h1{
+            padding-top: 30px;
+            }
+            p{
+                font-size: 16px;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+                line-height: 200%;
+            }
+            button{
+                @extend %bt;
+                background-color: $VeryLightGray;
+                color: $mainColor;
+                &:hover{cursor: pointer;
+                    color: $VeryLightGray;
+                    background-color: $mainColor;}
+            }
+            }
+        .img{
+        width: 50%;
+        float: left;
+        img{ overflow: hidden;
+        }}}}
+.def{
+    padding-right: $paddingRight;
+    padding-top: $paddingTop;
+    padding-left: $paddingLeft;
+    h1{padding-bottom: 30px;font-size: 40px;color: $VeryDarkViolet;}
+    .job{
+        box-sizing: border-box;
+        padding: 10px;
+        width: 33.333333% ;
+        float: left;
+        padding-bottom: $paddingBottom;
+        p{color: $DarkGrayishViolet;}
+        li{
+            list-style: none;
+            float: left;
+        }
+    }
+}
+.ourWork{
+    overflow: hidden;
+    width: 75%;
+    background-color: $mainColor;
+    margin: auto;
+    padding-right: $paddingRight;
+    padding-top: $paddingTop;
+    padding-bottom: $paddingBottom;
+    .work{
+        width: 70%;
+        float: left;
+        color: $VeryLightGray;
+        padding-top: $paddingTop;
+        span{
+            
+            padding-left: $paddingLeft;
+            font-size: 32px;
+    }
+    }
+    .bt{
+        width: 30%;
+        float: right;
+        margin: auto;
+        padding-top: 2*$paddingTop;
+        button{@extend %bt;
+        background: none;
+        color: $VeryLightGray;
+        &:hover{cursor: pointer;
+        background-color: $VeryLightGray;
+        color: $mainColor;}
+       }
+    }
+}
+.footer{
+    padding-left: $paddingLeft;
+    padding-right: $paddingRight;
+    padding-top: $paddingTop;
+    .logo{@extend %logo;}
+    ul{
+        @extend %ul;
+        padding-top: 5px;
+
+        li{
+            @extend %li;
+            color: $GrayishBlue;
+            &:hover{color: $mainColor;}
+        }}
+}
+.contant{
+    padding-right: $paddingRight;
+    padding-left: $paddingLeft;
+    padding-top: $paddingTop;
+    .sec{
+        width: 25%;
+        float: left;
+        margin: auto;
+        ul{
+            @extend %ul;
+            cursor: pointer;
+            li{ 
+            @extend %li;
+            line-height: 100%;
+            float: none;
+            color: $mainColor;
+            }
+            span{color: $GrayishBlue;
+                &:hover{color:$mainColor}}
+            
+            }
+        }
+    }

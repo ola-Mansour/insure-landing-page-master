@@ -1,0 +1,106 @@
+$mainColor: #2D2640;
+$GrayishBlue:hsl(216, 30%, 68%);
+$VeryDarkViolet: hsl(270, 9%, 17%);
+$DarkGrayishViolet: hsl(273, 4%, 51%);
+$VeryLightGray: hsl(0, 0%, 98%);
+.clearfix{clear:both;}
+%bt{
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 200%;
+    padding-left: 35px;
+    padding-right: 35px;
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+.container
+{overflow: hidden;
+    box-sizing: border-box;
+}
+.header{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: $VeryLightGray;
+    color: $DarkGrayishViolet;
+    .logo{float: left;
+        color: $VeryDarkViolet;
+        font-size: 35px;
+        }
+    .nvbar{
+    text-transform: uppercase;
+    padding-left: 100px;
+    ul {
+        list-style: none;
+        padding-left: 0px;
+        overflow: hidden;
+        float: right;
+       li {
+        float: left;
+        padding: 20px;
+        a {:hover{color:$mainColor}
+            text-decoration: none;
+            color: $GrayishBlue;
+        .active{
+            @extend %bt;
+            background-color: $mainColor;
+            color: $VeryLightGray;  
+        }
+        }
+      }
+    } 
+}
+}
+.slider{
+    background-color: $mainColor;
+    .pragraph {
+            color: $VeryLightGray;
+            float: left;
+            width: 45%;
+            padding-left: 50px;
+            h1{
+            padding-top: 30px;
+            }
+            p{
+                font-size: 16px;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+                line-height: 200%;
+            }
+            button{
+                @extend %bt;
+                background-color: $VeryLightGray;
+                color: $mainColor;
+            }
+            }
+        .img{
+        width: 50%;
+        float: right;
+        img{ overflow: hidden;
+        }}      
+}
+.def{
+    h1{padding-bottom: 30px;
+    font-size: 40px;}
+    .job{
+        box-sizing: border-box;
+        padding: 10px;
+        width: 33.333333% ;
+        float: left;
+        p{color: $DarkGrayishViolet;}
+        li{
+            list-style: none;
+            float: left;
+        }
+    }
+}
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+    }
